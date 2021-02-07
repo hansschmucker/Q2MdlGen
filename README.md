@@ -1,3 +1,28 @@
+Getting started
+
+You need a mod which supports MD3 loading via entity model_spawn. There's one included here, but if you have a better one go nuts:
+https://github.com/hansschmucker/Q2MdlGen/blob/main/model_spawn.mod/gamex86_64.dll
+Create a directory next to baseq2 and give it an appropriate name. This is your mod path. To launch Q2RTX with this mod create a shortcut
+and add +set game MyModName to the commandline. In my case it's 
+q2rtx.exe +set game model_spawn +set cheats 1 +set cl_gun 0 +bind q quit +bind l toggleconsole +bind p screenshot
+(which also adds a few other niceties).
+Create a maps and a models folder int your mod directory.
+Place any old OBJ file in the models directory.
+Open up your favorite map editor and put a model_spawn entity where you want the model to appear. Set the model key to the relative path, for example:
+
+[model_spawn]
+model=models/town.obj
+
+Move it to the desired location of 0,0,0 in your model, save the map and run it through Q2MdlGen (If you're working
+directly on the MAP file, be sure to save it, because Q2MdlGen will alter it):
+
+Q2MdlGen Town.map
+
+The result will be a couple of new md3 files in your models directory and an updated map. Run that through your usual build process and you'll get
+a map with all your favorite polygons in the right place.
+
+
+
 Syntax:
    Q2MdlGen SourceObjectFile [NoTGA] [GenASE] [ModelName MyRelativeModelNameWithoutDotMD3] [MatName MyTexturePath]
    or Q2MdlGen SourceMapFile
