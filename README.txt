@@ -1,4 +1,4 @@
-Syntax:
+﻿Syntax:
    Q2MdlGen SourceObjectFile [NoTGA] [GenASE] [ModelName MyRelativeModelNameWithoutDotMD3] [MatName MyTexturePath]
    or Q2MdlGen SourceMapFile
 
