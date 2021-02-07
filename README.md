@@ -21,7 +21,8 @@ Q2MdlGen Town.map
 The result will be a couple of new md3 files in your models directory and an updated map. Run that through your usual build process and you'll get
 a map with all your favorite polygons in the right place.
 
-
+You can also find my compile script, along with a sample model and map at
+https://github.com/hansschmucker/Q2MdlGen/tree/main/sample_data
 
 Syntax:
    Q2MdlGen SourceObjectFile [NoTGA] [GenASE] [ModelName MyRelativeModelNameWithoutDotMD3] [MatName MyTexturePath]
